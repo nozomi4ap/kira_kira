@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>きらきらノート</title>
+<meta name="description" content="かわいいものを記録する、じぶんだけのノート" />
+<meta name="theme-color" content="#FFD3E4" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icon-180.png" />
+<link rel="icon" href="icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="きらきらノート" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FFF0F5; }
+  #root { min-height: 100vh; }
+  @font-face {
+    font-family: 'Kiwi Maru';
+    src: local('Kiwi Maru');
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="app.js"></script>
+<script>
+  setTimeout(function () {
+    var root = document.getElementById('root');
+    if (root && root.getAttribute('data-mounted') !== '1') {
+      root.innerHTML =
+        '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;font-family:sans-serif;text-align:center;color:#B4436C;background:#FFF0F5;">' +
+        '<div>' +
+        '<p style="font-size:15px;margin-bottom:10px;">アプリの読み込みに失敗しました</p>' +
+        '<p style="font-size:12px;line-height:1.7;color:#C77A98;">ページを再読み込みしてみてください。<br>直らない場合は、この画面のスクリーンショットを教えてください。</p>' +
+        '</div></div>';
+    }
+  }, 3000);
+</script>
+</body>
+</html>
